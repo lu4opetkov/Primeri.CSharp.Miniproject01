@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1C3141CD-248B-4EA5-95C1-F4B6D917AF7C}</ProjectGuid>
+    <ProjectGuid>{6784D0E3-71FE-4462-9140-D5462E520C8B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>UserInput</RootNamespace>
-    <AssemblyName>UserInput</AssemblyName>
+    <RootNamespace>Colors</RootNamespace>
+    <AssemblyName>Colors</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -32,17 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserInput.cs" />
+    <Compile Include="ForCLI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\About\About.csproj">
-      <Project>{BA7DCCA3-3A9A-434A-8D4B-0F4EF9F388F0}</Project>
-      <Name>About</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Colors\Colors.csproj">
-      <Project>{6784D0E3-71FE-4462-9140-D5462E520C8B}</Project>
-      <Name>Colors</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
