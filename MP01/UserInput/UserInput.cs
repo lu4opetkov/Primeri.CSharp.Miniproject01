@@ -7,6 +7,7 @@ namespace UserInput
 	{
 		Colors.ForCLI _c = new Colors.ForCLI();
 		About.Me about = new About.Me ();
+		Calculations.MainLibrary _calc = new Calculations.MainLibrary ();
 
 		public void sayHello ()
 		{
@@ -18,27 +19,21 @@ namespace UserInput
 		}
 		public void getUserCommands ()
 		{
-			string command = "";
+			string _command = "";
 			do {
 				// Взимане на команда
 				_c.Prompt();  Console.Write("$ ");
-				_c.Command(); command = Console.ReadLine();
+				_c.Command(); _command = Console.ReadLine();
 
 				// Проверка за налични команди
 
-				if (command.ToLower().Contains("команда1"))  
-				{
-					_c.Default ();
-					Console.Write("Стартирана е ");
-					_c.Command ();
-					Console.WriteLine("команда 1\n");
+				if (_command.ToLower().Contains("яма"))  _calc.F01.calc(_command);
 
-				}
-				if (command.ToLower().Contains("команда2"))  Console.WriteLine("Стартирана е команда 2\n");
+				if (_command.ToLower().Contains("команда2"))  Console.WriteLine("Стартирана е команда 2\n");
 
-				if (command.ToLower().Contains("команда3"))  Console.WriteLine("Стартирана е команда 3\n");	
+				if (_command.ToLower().Contains("команда3"))  Console.WriteLine("Стартирана е команда 3\n");	
 
-			} while (command.ToLower() != "изход");
+			} while (_command.ToLower() != "изход");
 		}
 
 
