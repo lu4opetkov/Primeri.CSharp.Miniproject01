@@ -4,7 +4,7 @@
     <Files>
       <File FileName="UserInput\UserInput.cs" Line="26" Column="20" />
       <File FileName="Calculations\Calculations.cs" Line="12" Column="3" />
-      <File FileName="Calculations\Formula01.cs" Line="23" Column="54" />
+      <File FileName="Calculations\Formula01.cs" Line="66" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
