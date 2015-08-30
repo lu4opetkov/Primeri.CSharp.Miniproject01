@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Calculator\Calculator.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Calculations\Formula01.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Calculations\Formula02.cs">
     <Files>
-      <File FileName="UserInput\UserInput.cs" Line="26" Column="20" />
-      <File FileName="Calculations\Calculations.cs" Line="12" Column="3" />
+      <File FileName="UserInput\UserInput.cs" Line="30" Column="48" />
+      <File FileName="Calculations\Formula02.cs" Line="32" Column="22" />
+      <File FileName="Calculations\Calculations.cs" Line="9" Column="3" />
       <File FileName="Calculations\Formula01.cs" Line="66" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
