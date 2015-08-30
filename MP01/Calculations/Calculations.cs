@@ -7,6 +7,7 @@ namespace Calculations
 		public Formula01 F01 = new Formula01();
 		public Formula02 F02 = new Formula02();
 		public Formula03 F03 = new Formula03();
+		public Formula04 F04 = new Formula04();
 
 
 		// Библиотеки
@@ -30,12 +31,10 @@ namespace Calculations
 
 			_cl.Command (); Console.Write("[иъгъл]");
 			_cl.Default (); Console.WriteLine(" - Пресмятане на изпънал ъгъл");
-		}
-		public void badcommand()
-		{
-			_cl.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п \n\n");
-		}
 
+			_cl.Command (); Console.Write("[съгъл]");
+			_cl.Default (); Console.WriteLine(" - Пресмятане на страничен ъгъл");
+		}
 	}
 }
 
