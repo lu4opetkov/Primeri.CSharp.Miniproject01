@@ -17,19 +17,20 @@ namespace Calculations
 				{
 					help();
 				}
-				if(param.Length == 4)
-				{
-					double result = 0;
-					if (runCalculate (param, out result))
-					{
-						_cl.Default();	Console.Write("Обемът на изпъкнал ъгъл е: ");
-						_cl.Result();	Console.Write(result.ToString("N2") );
-						_cl.Default();	Console.WriteLine(" m3\n");
-					}
-					else{
-						;
-					}
-				}
+				if(param.Length != 4){badcommand();}
+				else
+							{
+								double result = 0;
+								if (runCalculate (param, out result))
+								{
+									_cl.Default();	Console.Write("Обемът на изпъкнал ъгъл е: ");
+									_cl.Result();	Console.Write(result.ToString("N2") );
+									_cl.Default();	Console.WriteLine(" m3\n");
+								}
+								else{
+									
+								}
+							}
 			}catch{
 			}
 		}
@@ -37,15 +38,14 @@ namespace Calculations
 		private bool runCalculate (string [] _param, out double _result)
 		{
 			try {
-				double a = 0;
-				Double.TryParse (_param [1], out a);
-				double b = 0;
-				Double.TryParse (_param [2], out b);
-				double h = 0;
-				Double.TryParse (_param [3], out h);
-
-				_result = 2 * (a * b * h) / 3;
-				return true;
+				double a = 0,b=0, h=0;
+				if (Double.TryParse (_param [1], out a) &&
+					Double.TryParse (_param [2], out b) &&
+					Double.TryParse (_param [3], out h))
+					{
+					_result = 2 * (a * b * h) / 3;
+					return true;
+					}else{badcommand();}
 
 			} catch {
 			}
@@ -68,6 +68,10 @@ namespace Calculations
 			_cl.Command();Console.Write (" h");
 			_cl.Default();Console.WriteLine(" - височина");
 
+		}
+		private void badcommand()
+		{
+			_cl.Default(); Console.Write("Има грешно въведени параметри. Може \nда проверите синтаксиса с параметъра -п \n\n");
 		}
 	}
 }

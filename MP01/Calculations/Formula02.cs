@@ -5,6 +5,7 @@ namespace Calculations
 	public class Formula02 
 	{
 		Colors.ForCLI _cl = new Colors.ForCLI();
+
 		//Формула за вдлъбнат ъгъл
 	public Formula02 ()
 		{
@@ -21,7 +22,8 @@ namespace Calculations
 					}
 				if (param.Length != 4){
 					badcommand ();}
-				else {
+				else 
+				{
 					double result = 0;
 					if (runCalculate (param, out result)) {
 						_cl.Default ();
@@ -36,9 +38,6 @@ namespace Calculations
 			}catch{
 			}
 		}
-
-
-
 
 		private bool runCalculate (string [] _param, out double _result)
 		{
@@ -82,7 +81,7 @@ namespace Calculations
 		}
 		private void badcommand()
 		{
-			_cl.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п \n\n");
+			_cl.Default(); Console.Write("Има грешно въведени параметри. Може \n да проверите синтаксиса с параметъра -п \n\n");
 		}
 	}
 }
