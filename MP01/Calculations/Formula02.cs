@@ -19,20 +19,22 @@ namespace Calculations
 					if(param.Length >1 && _input.ToLower().Contains ("-п") )
 					{
 							help();
-					}
-				if (param.Length != 4){
-					badcommand ();}
-				else 
-				{
-					double result = 0;
-					if (runCalculate (param, out result)) {
-						_cl.Default ();
-						Console.Write ("Обемът на вдлъбнатият ъгъл е: ");
-						_cl.Result ();
-						Console.Write (result.ToString ("N2"));
-						_cl.Default ();
-						Console.WriteLine (" m3\n");
-					}
+				}else{
+						if (param.Length != 4){
+							badcommand ();}
+						else 
+							{
+								double result = 0;
+								if (runCalculate (param, out result)) 
+								{
+									_cl.Default ();
+									Console.Write ("Обемът на вдлъбнатият ъгъл е: ");
+									_cl.Result ();
+									Console.Write (result.ToString ("N2"));
+									_cl.Default ();
+									Console.WriteLine (" m3\n");
+								}
+							}
 				}
 			
 			}catch{
@@ -76,7 +78,7 @@ namespace Calculations
 			_cl.Default();Console.WriteLine(" - ширина и дължина");
 
 			_cl.Command();Console.Write (" h");
-			_cl.Default();Console.WriteLine(" - височина");
+			_cl.Default();Console.WriteLine(" - височина\n");
 
 		}
 		private void badcommand()

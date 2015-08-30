@@ -16,18 +16,19 @@ namespace Calculations
 				string[] param = _userInput.Split (' ');
 				if (param.Length > 1 && _userInput.Contains ("-п")) 
 				{
-					//Помощ за командата
 					help();
-				}
-				if (param.Length > 1 ) 
-				{
-					//Изчисления
-					double _result = 0;
-					if (runCalculations(param, out _result))
+				}else{
+					if (param.Length > 1 && param.Length != 6 ) {badcommand();}
+					else
 					{
-						_c.Default(); Console.Write("Обема на строителната яма е: " );
-						_c.Result(); Console.Write (_result.ToString("N2") );
-						_c.Default(); Console.WriteLine(" м3\n\n");
+						//Изчисления
+						double _result = 0;
+						if (runCalculations(param, out _result))
+						{
+							_c.Default(); Console.Write("Обема на строителната яма е: " );
+							_c.Result(); Console.Write (_result.ToString("N2") );
+							_c.Default(); Console.WriteLine(" м3\n\n");
+						}
 					}
 				}
 
@@ -80,7 +81,7 @@ namespace Calculations
 		}
 		public void badcommand()
 		{
-			_c.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п \n\n");
+			_c.Default(); Console.WriteLine("Има грешно въведени параметри. Може\nда проверите синтаксиса с параметъра -п \n\n");
 		}
 	}
 }
