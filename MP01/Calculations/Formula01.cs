@@ -19,7 +19,8 @@ namespace Calculations
 					//Помощ за командата
 					help();
 				}
-				if (param.Length > 1 && !_userInput.Contains ("-п")) {
+				if (param.Length > 1 ) 
+				{
 					//Изчисления
 					double _result = 0;
 					if (runCalculations(param, out _result))
@@ -27,10 +28,6 @@ namespace Calculations
 						_c.Default(); Console.Write("Обема на строителната яма е: " );
 						_c.Result(); Console.Write (_result.ToString("N2") );
 						_c.Default(); Console.WriteLine(" м3\n\n");
-					}
-					else
-					{
-						_c.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п ");
 					}
 				}
 
@@ -45,21 +42,22 @@ namespace Calculations
 					double _a1= 0, _b1 =0, _a2 = 0, _b2=0, _h=0 ;
 
 				//param[0] == <име на команда>
-				Double.TryParse(_param[1], out _a1);
-				Double.TryParse(_param[2], out _b1);
-				Double.TryParse(_param[3], out _a2);
-				Double.TryParse(_param[4], out _b2);
-				Double.TryParse(_param[5], out _h);
-
-				double F1 = _a1 * _b1, F2=_a2*_b2;
-				_result= _h * (F1+F2)/2;
-
-				return true;
-
+				if( Double.TryParse(_param[1], out _a1) &&
+					Double.TryParse(_param[2], out _b1) &&
+					Double.TryParse(_param[3], out _a2) &&
+					Double.TryParse(_param[4], out _b2) &&
+					Double.TryParse(_param[5], out _h))
+						{
+						double F1 = _a1 * _b1, F2=_a2*_b2;
+						_result= _h * (F1+F2)/2;
+						return true;
+						}
+				else{ badcommand();}
 				}catch{
-			}
-			_result = 0;
-			return false;
+						}
+						_result = 0;
+
+						return false;
 			
 		}
 		//Помощ за командата
@@ -79,6 +77,10 @@ namespace Calculations
 
 			_c.Command(); Console.Write(" h ");
 			_c.Result(); Console.WriteLine(" - дълбочина на изкопа \n");
+		}
+		public void badcommand()
+		{
+			_c.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п \n\n");
 		}
 	}
 }

@@ -5,7 +5,7 @@ namespace Calculations
 	public class Formula03
 	{
 		private Colors.ForCLI _cl = new Colors.ForCLI();
-		public Formula03 ()
+				public Formula03 ()
 		{
 		}
 		public void calc (string _input)
@@ -27,7 +27,7 @@ namespace Calculations
 						_cl.Default();	Console.WriteLine(" m3\n");
 					}
 					else{
-						_cl.Default();	Console.WriteLine("Има грешно въведени параметри! С параметъра '-п' можете\nда видите синтаксиса на командата\n" );
+						;
 					}
 				}
 			}catch{
@@ -49,7 +49,7 @@ namespace Calculations
 
 			} catch {
 			}
-
+		
 			_result = 0;
 			return false;
 

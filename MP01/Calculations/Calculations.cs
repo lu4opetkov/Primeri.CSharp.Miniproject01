@@ -31,6 +31,10 @@ namespace Calculations
 			_cl.Command (); Console.Write("[иъгъл]");
 			_cl.Default (); Console.WriteLine(" - Пресмятане на изпънал ъгъл");
 		}
+		public void badcommand()
+		{
+			_cl.Default(); Console.WriteLine("Има грешно въведени параметри. Може да проверите синтаксиса с параметъра -п \n\n");
+		}
 
 	}
 }
