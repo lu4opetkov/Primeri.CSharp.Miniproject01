@@ -1,11 +1,15 @@
 ﻿<Properties StartupItem="Calculator\Calculator.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Calculations\Formula02.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Calculations\Calculations.cs">
     <Files>
-      <File FileName="UserInput\UserInput.cs" Line="30" Column="48" />
-      <File FileName="Calculations\Formula02.cs" Line="32" Column="22" />
-      <File FileName="Calculations\Calculations.cs" Line="9" Column="3" />
-      <File FileName="Calculations\Formula01.cs" Line="66" Column="15" />
+      <File FileName="UserInput\UserInput.cs" Line="49" Column="3" />
+      <File FileName="Calculations\Calculations.cs" Line="31" Column="73" />
+      <File FileName="Calculations\Formula01.cs" Line="31" Column="8" />
+      <File FileName="Calculations\Formula02.cs" Line="81" Column="50" />
+      <File FileName="Calculations\Formula03.cs" Line="67" Column="50" />
+      <File FileName="Calculations\Formula04.cs" Line="70" Column="60" />
+      <File FileName="Calculations\Formula05.cs" Line="73" Column="71" />
+      <File FileName="Calculator\Program.cs" Line="15" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
